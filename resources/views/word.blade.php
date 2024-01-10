@@ -242,7 +242,7 @@
                                             id="peserta_rapat" name="peserta_rapat">
                                             <option selected>Peserta Rapat Mitra</option>
                                             <option value="PT. TELKOM AKSES">PT. TELKOM AKSES</option>
-                                            <option value="KOPEGTEL PALANGKA RAYA">KOPEGTEL PALANGKA RAYA</option>
+                                            <option value="KOPERASI KARYAWAN TELKOM KALTENG ICC">KOPERASI KARYAWAN TELKOM KALTENG ICC</option>
                                             <option value="Mitra Lainnya">Mitra Lainnya</option>
                                         </select>
                                         <div class="form-text">(Tanya ke User)</div>
@@ -277,18 +277,19 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="pks_khs" class="col-sm-3 col-form-label">PKS KHS (Dasar Pelaksanaan
-                                        1)</label>
-                                    <div class="col-sm-9">
-                                        {{-- <input type="text" class="form-control" name="pks_khs" id="pks_khs"> --}}
-                                        <textarea class="form-control" name="pks_khs" id="pks_khs"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
                                     <label for="no_pks_khs" class="col-sm-3 col-form-label">Nomor PKS KHS</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" name="no_pks_khs"
                                             id="no_pks_khs">
+                                        <div class="form-text">(Tanya Admin Mitra)</div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="pks_khs" class="col-sm-3 col-form-label">PKS KHS (Dasar Pelaksanaan)</label>
+                                    <div class="col-sm-9">
+                                        {{-- <input type="text" class="form-control" name="pks_khs" id="pks_khs"> --}}
+                                        <textarea class="form-control" name="pks_khs" id="pks_khs"></textarea>
+                                        <div class="form-text">(Di sesuaikan dengan KHS)</div>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -296,6 +297,7 @@
                                     <div class="col-sm-9">
                                         <input type="date" class="form-control" name="tgl_pks_khs"
                                             id="tgl_pks_khs">
+                                        <div class="form-text">(Tanya Admin Mitra)</div>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -382,7 +384,7 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="pihak_telkom" class="col-sm-3 col-form-label">Pihak Telkom</label>
+                                    <label for="pihak_telkom" class="col-sm-3 col-form-label">Pihak Telkom (TTD)</label>
                                     <div class="col-sm-9">
                                         <select class="form-select" onchange="telkom()"
                                             aria-label="Default select example" id="pihak_telkom"
@@ -390,6 +392,7 @@
                                             <option>Pihak Telkom</option>
                                             <option value="RUDI ENDARYANTO">RUDI ENDARYANTO</option>
                                             <option value="GATRA DI YOGA TAMA">GATRA DI YOGA TAMA</option>
+                                            <option value="NUGRAHA BASUKI">NUGRAHA BASUKI</option>
                                             <option value="Lainnya">Lainnya</option>
                                         </select>
                                         <div class="form-text">Lihat di juskeb</div>
@@ -540,7 +543,7 @@
                         <label for="no_akun" class="col-sm-2 col-form-label">No Akun</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="no_akun" id="no_akun">
-                            <div class="form-text">(Cek di Juskeb)</div>
+                            <div class="form-text">(Cek di Juskeb / Ref NDE)</div>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -618,14 +621,14 @@
                         <label for="no_pr" class="col-sm-2 col-form-label">Nomor PR</label>
                         <div class="col-sm-10">
                             <input type="number" class="form-control" name="no_pr" id="no_pr">
-                            <div class="form-text">(Cek di NDE Pelimpahan)</div>
+                            <div class="form-text">(Cek di PR)</div>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label for="tgl_pr" class="col-sm-2 col-form-label">Tanggal PR</label>
                         <div class="col-sm-10">
                             <input type="date" class="form-control" name="tgl_pr" id="tgl_pr">
-                            <div class="form-text">(Cek di PR yang sudah di download)</div>
+                            <div class="form-text">(Cek di PR)</div>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -635,15 +638,15 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="pks_khs2" class="col-sm-2 col-form-label">PKS KHS (Dasar Pelaksanaan 1)</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" name="pks_khs2" id="pks_khs2" disabled></textarea>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
                         <label for="no_pks_khs2" class="col-sm-2 col-form-label">Nomor PKS KHS</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="no_pks_khs2" id="no_pks_khs2" disabled>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="pks_khs2" class="col-sm-2 col-form-label">PKS KHS (Dasar Pelaksanaan)</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="pks_khs2" id="pks_khs2" disabled></textarea>                            
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -812,16 +815,16 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="pks_khs3" class="col-sm-2 col-form-label">PKS KHS (Dasar Pelaksanaan 1)</label>
-                        <div class="col-sm-10">
-                            {{-- <input type="text" class="form-control" name="pks_khs3" id="pks_khs3" disabled> --}}
-                            <textarea class="form-control" name="pks_khs3" id="pks_khs3" disabled></textarea>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
                         <label for="no_pks_khs3" class="col-sm-2 col-form-label">Nomor PKS KHS</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="no_pks_khs3" id="no_pks_khs3" disabled>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="pks_khs3" class="col-sm-2 col-form-label">PKS KHS (Dasar Pelaksanaan)</label>
+                        <div class="col-sm-10">
+                            {{-- <input type="text" class="form-control" name="pks_khs3" id="pks_khs3" disabled> --}}
+                            <textarea class="form-control" name="pks_khs3" id="pks_khs3" disabled></textarea>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -920,7 +923,7 @@
             }, 5000);
             // down.innerHTML = "Disabled Attribute removed";
         }
-        // PKS KHS (Dasar Pelaksanaan 1)
+        // PKS KHS (Dasar Pelaksanaan)
         function val() {
             x = document.getElementById("peserta_rapat").value;
             y = document.getElementById("mitra_lainnya");
@@ -957,7 +960,7 @@
                         "MGR OPERATION PALANGKARAYA";
                     y.style.display = 'none';
                     break;
-                case "KOPEGTEL PALANGKA RAYA":
+                case "KOPERASI KARYAWAN TELKOM KALTENG ICC":
                     document.getElementById("pks_khs").value =
                         "Outside Plant Fiber Optic (OSP-FO) Akses antara PT Telkom Indonesia (Persero), Tbk dengan " + x;
                     document.getElementById("pks_khs2").value =
@@ -965,11 +968,11 @@
                     document.getElementById("pks_khs3").value =
                         "Outside Plant Fiber Optic (OSP-FO) Akses antara PT Telkom Indonesia (Persero), Tbk dengan " + x;
                     document.getElementById("no_pks_khs").value =
-                        "K.Tel.005139/HK.810/DR6-10000000/2023";
+                        "K.TEL.005139/HK.810/DR6-10000000/2023";
                     document.getElementById("no_pks_khs2").value =
-                        "K.Tel.005139/HK.810/DR6-10000000/2023";
+                        "K.TEL.005139/HK.810/DR6-10000000/2023";
                     document.getElementById("no_pks_khs3").value =
-                        "K.Tel.005139/HK.810/DR6-10000000/2023";
+                        "K.TEL.005139/HK.810/DR6-10000000/2023";
                     document.getElementById("tgl_pks_khs").value =
                         "2023-09-18";
                     document.getElementById("tgl_pks_khs2").value =
@@ -1049,6 +1052,15 @@
                         "MGR ACCESS OPTIMA, MAINTENANCE, QE & DAMAN";
                     document.getElementById("mgr_terkait").value =
                         "Gatra Di Yoga Tama";
+                    y.style.display = 'none';
+                    break;
+                case "NUGRAHA BASUKI":
+                    document.getElementById("nik_pihak_telkom").value =
+                        "690281";
+                    document.getElementById("jabatan_pihak_telkom").value =
+                        "MGR NETWORK AREA & IS OPERATION";
+                    document.getElementById("mgr_terkait").value =
+                        "Nugraha Basuki";
                     y.style.display = 'none';
                     break;
                 case "Lainnya":
